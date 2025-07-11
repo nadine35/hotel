@@ -1,6 +1,6 @@
-# Base de données "society"
+# Base de données "hotel"
 
-Ce dépôt contient les exercices de requêtage portant sur la base de données "society" utilisée en formation à l'Afpa.
+Ce dépôt contient les exercices de requêtage portant sur la base de données "hotel" utilisée en formation à l'Afpa.
 
 Vous y retrouverez :
 - les fichiers de configuration Docker ;
