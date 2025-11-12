@@ -3,7 +3,7 @@
 services:
   postgres:
     # Nom du conteneur qui sera créé
-    container_name: hotel-db
+    container_name: cogip-db
     # Image de base utilisée (vous pouvez changer la version en vous référant au Docker Hub : https://hub.docker.com/)
     image: postgres:17.2
     # Variables d'environnement qui seront utilisées pour configurer le conteneur
@@ -13,13 +13,13 @@ services:
       # Mot de passe du super admin, super sensible.
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       # Nom d'une base de données créée au lancement du conteneur
-      - POSTGRES_DB=hotel
+      - POSTGRES_DB=cogip-db
     # Redirection de port "local:conteneur"
     ports:
-      - "5440:5432"
+      - "5445:5432"
     # Le "docker engine" tente systématiquement de redémarrer le conteneur
     # de plus, le conteneur est démarrer automatiquement au lancement du "doker engine"
     restart: always
     # Création du volume permettant d'ajouter le script de création de la base de données au conteneur Docker
     volumes:
-      - ./db/hotel-postgre-incomplet.sql:/docker-entrypoint-initdb.d/hotel-postgre-incomplet.sql
+      - ./db/cogip-supply-postgre.sql:/docker-entrypoint-initdb.d/cogip-supply-postgre.sql
